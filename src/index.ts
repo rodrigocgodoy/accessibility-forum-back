@@ -7,7 +7,7 @@ import { db } from "./config/config";
 import * as PostController from "./controllers/postController";
 
 const app: Application = express();
-const port: number = 5000 || process.env.PORT;
+const port: string = process.env.PORT || '5000';
 
 connect(db);
 
