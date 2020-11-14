@@ -36,11 +36,4 @@ const postSchema: Schema = new Schema({
   },
 });
 
-postSchema.static("findAllByAuthor", (author: string) => {
-  return Post
-    .find({ author: author })
-    .lean()
-    .exec();
-});
-
 export const Post = mongoose.model<IPost>('Post', postSchema) as IPostModel;

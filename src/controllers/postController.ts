@@ -20,6 +20,7 @@ export const showPost = async (req: Request, res: Response) => {
 
 export const addPost = async (req: Request, res: Response) => {
   const post = await Post.create(req.body);
+  await post.save();
   return res.json(post);
 };
 
