@@ -18,25 +18,21 @@ const postSchema: Schema = new Schema({
     type: String,
     required: true,
   },
-  description: {
+  id_user: {
     type: String,
     required: true,
   },
   email: {
     type: String,
-    required: true,
+    required: false,
   },
   urlProfile: {
     type: String,
-    required: true,
-  },
-  id: {
-    type: String,
-    required: true,
+    required: false,
   },
   name: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
