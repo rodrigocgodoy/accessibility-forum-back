@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { Post } from "../models/post";
 
 export const allPosts = async (req: Request, res: Response) => {
-  const posts = await Post.find({}).exec();
+  const posts = await Post.find({}).sort({ _id: 'desc' }).exec();
  
   return res.json(posts);
 };
